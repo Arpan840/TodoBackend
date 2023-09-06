@@ -13,8 +13,6 @@ route.get("/getTodos", getAllTodos);
 route.put("/todos/:id", toggleTodoDone);
 route.put("/todosUpdate/:id", updatedTodos);
 route.delete("/todosDelete/:id", deleteTodo);
-route.get("/", (req, res) => {
-  res.send("<h1>Todo List</h1>");
-});
+
 
 export default route;

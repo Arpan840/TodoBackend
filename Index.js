@@ -9,7 +9,10 @@ app.use(corse({origin:["http://localhost:3000"]}))
 const port="3002"
 const host="localhost"
 app.use(express.json());
-app.use('/',route)
+app.use('/api',route)
+app.get("/", (req, res) => {
+    res.send("<h1>Todo List</h1>");
+  });
 
 
 app.listen(port,()=>{

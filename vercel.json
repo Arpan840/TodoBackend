@@ -1,26 +1,13 @@
 {
-  "builds": [
-    {
-      "src": "./index.js", 
-      "use": "@now/node-server"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/Routes/Todolist.js", 
-      "dest": "/Routes/Todolist.js" 
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.js" 
-    }
-  ],
-  "env": {
-    "NODE_ENV": "production",
-    "PORT": "3002", 
-    "HOST": "localhost", 
-    "ALLOWED_ORIGIN": "http://localhost:3000" 
+    "version": 2,
+    "builds": [
+      { "src": "./index.js", "use": "@vercel/node" }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/index.js"
+      }
+    ]
   }
-}
-
   
