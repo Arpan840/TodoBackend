@@ -2,10 +2,10 @@ import express from "express"
 import databaseConnection from "./db.js"
 import route from "./Routes/Todolist.js";
 
-import cors from "cors"
+import corse from "cors"
 
 const app=express();
-app.use(cors());
+app.use(corse({origin:["http://localhost:3000"]}))
 const port="3002"
 const host="localhost"
 app.use(express.json());
