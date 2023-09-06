@@ -10,7 +10,7 @@ const port="3002"
 const host="localhost"
 app.use(express.json());
 app.use('/api',route)
-app.get("/", (req, res) => {
+app.use("/", (req, res) => {
     res.send("<h1>Todo List</h1>");
   });
 
